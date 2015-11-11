@@ -1,0 +1,19 @@
+#header, #main{
+   color: white;
+}
+#header {
+   background-color: red;
+   font-size: 100px;
+   font-weight: bold;
+   text-align: center;
+   width: 100%;
+}
+#main {
+   background-color: gray;
+   padding: 20px;
+   margin: 20px;
+}
+#input,#btn,#content {
+   font-size: 30px;
+}
+
