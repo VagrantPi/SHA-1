@@ -1,19 +1,23 @@
 #header, #main{
-   color: white;
+  color: white;
 }
 #header {
-   background-color: red;
-   font-size: 100px;
-   font-weight: bold;
-   text-align: center;
-   width: 100%;
+  background-color: red;
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
 }
 #main {
-   background-color: gray;
-   padding: 20px;
-   margin: 20px;
+  background-color: gray;
+  padding: 20px;
+  margin: 20px;
 }
-#input,#btn,#content {
-   font-size: 30px;
+#input,.btn,#content,#output {
+  font-size: 35px;
+  display: block; 
+  margin:  auto;
 }
-
+#output {
+  text-align: center;
+}
