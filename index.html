@@ -30,9 +30,10 @@ document.getElementById('btn').onclick = function() {
 
 document.getElementById('btn2').onclick = function() {
   var txt_string = document.getElementById('input').value;
-  for(var i = 0;i < 80;i++){
-    document.write("<p>t[" + i + "] : " + SHA1(txt_string)[i] + "</p>");
-    document.write("<p>" + SHA1(txt_string) + "</p>");
+  var x;
+  document.writeln("  " + "a" + "     " +  "  b     c     d     e");
+  for(x = 0;x < 80;x++){
+    document.write("<p>t[" + x + "] : " + SHA1(txt_string)[x].join(" | ") + "</p>");
   } 
   document.write("<p>SHA-1 hash of '" + txt_string +"' is :" + SHA1(txt_string)[80] + "</p>");
 }
@@ -135,11 +136,12 @@ function SHA1(msg) {
     for( i= 0; i<=19; i++ ) {
       temp = (rotate_left(A,5) + ((B&C) | (~B&D)) + E + W[i] + 0x5A827999) & 0x0ffffffff;
       E = D;
+      //((SHA1(txt_string)[i][])>>>0).toString(16);
       D = C;
       C = rotate_left(B,30);
       B = A;
       A = temp;
-      t[i] = [A,B,C,D,E];
+      t[i] = [(A>>>0).toString(16),(B>>>0).toString(16),(C>>>0).toString(16),(D>>>0).toString(16),(E>>>0).toString(16)];
     }
     for( i=20; i<=39; i++ ) {
       temp = (rotate_left(A,5) + (B ^ C ^ D) + E + W[i] + 0x6ED9EBA1) & 0x0ffffffff;
@@ -148,7 +150,8 @@ function SHA1(msg) {
       C = rotate_left(B,30);
       B = A;
       A = temp;
-      t[i] = [A,B,C,D,E];
+      //t[i] = [A,B,C,D,E];
+      t[i] = [(A>>>0).toString(16),(B>>>0).toString(16),(C>>>0).toString(16),(D>>>0).toString(16),(E>>>0).toString(16)];
     }
     for( i=40; i<=59; i++ ) {
       temp = (rotate_left(A,5) + ((B&C) | (B&D) | (C&D)) + E + W[i] + 0x8F1BBCDC) & 0x0ffffffff;
@@ -157,7 +160,8 @@ function SHA1(msg) {
       C = rotate_left(B,30);
       B = A;
       A = temp;
-      t[i] = [A,B,C,D,E];
+      //t[i] = [A,B,C,D,E];
+      t[i] = [(A>>>0).toString(16),(B>>>0).toString(16),(C>>>0).toString(16),(D>>>0).toString(16),(E>>>0).toString(16)];
     }
     for( i=60; i<=79; i++ ) {
       temp = (rotate_left(A,5) + (B ^ C ^ D) + E + W[i] + 0xCA62C1D6) & 0x0ffffffff;
@@ -166,7 +170,8 @@ function SHA1(msg) {
       C = rotate_left(B,30);
       B = A;
       A = temp;
-      t[i] = [A,B,C,D,E];
+      //t[i] = [A,B,C,D,E];
+      t[i] = [(A>>>0).toString(16),(B>>>0).toString(16),(C>>>0).toString(16),(D>>>0).toString(16),(E>>>0).toString(16)];
     }
     H0 = (H0 + A) & 0x0ffffffff;
     H1 = (H1 + B) & 0x0ffffffff;
