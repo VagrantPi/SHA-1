@@ -30,11 +30,27 @@ document.getElementById('btn').onclick = function() {
 
 document.getElementById('btn2').onclick = function() {
   var txt_string = document.getElementById('input').value;
-  var x;
-  document.writeln("  " + "a" + "     " +  "  b     c     d     e");
-  for(x = 0;x < 80;x++){
-    document.write("<p>t[" + x + "] : " + SHA1(txt_string)[x].join(" | ") + "</p>");
+  var x,y,z,temp;
+  document.writeln("===== a ====== b ====== c ====== d ====== e =====");
+  for(x = 0;x < 80;x++) {
+    document.write("<p>t[" + x + "] : ");
+    for(y = 0;y < 5;y++) {
+      temp = (SHA1(txt_string)[x][y]).split("");
+      for(z = temp.length;z < 8;z++) {
+        if(temp.length < 8) {
+          temp.unshift("0")
+        }
+      }
+      temp = temp.join("");
+      document.write(temp + " | ");
+
+      //document.write("<p>t[" + x + "] : " + SHA1(txt_string)[x][y] + "</p>");
+    }
+    //document.write("<BR>");
+    //document.write("<p>t[" + x + "] : " + SHA1(txt_string)[x].join(" | ") + "</p>");
   } 
+  document.write("<BR>");
+  document.writeln("=================================================");
   document.write("<p>SHA-1 hash of '" + txt_string +"' is :" + SHA1(txt_string)[80] + "</p>");
 }
 /**
