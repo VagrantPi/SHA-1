@@ -18,6 +18,12 @@
   display: block; 
   margin:  auto;
 }
-#output {
-  text-align: center;
+.row {
+  text-align : center;
+}
+.btn {
+  border-radius:26px;
+  display:inline-block;
+  background-color: red;
+  font-family:Arial;
 }
