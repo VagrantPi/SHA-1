@@ -63,10 +63,8 @@ document.getElementById('btn2').onclick = function() {
         }
       }
       temp = temp.join("");
-      document.write(temp.toUpperCase() + " | ");
+      document.write(temp.toLocaleUpperCase() + " | ");
 //      document.write(temp+ " | ");
-
-      //document.write("<p>t[" + x + "] : " + SHA1(txt_string)[x][y] + "</p>");
     }
     if((x+1)%20 == 0 && x != 0 && x != 79 ) {
       document.writeln("<p>");
