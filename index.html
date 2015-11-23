@@ -42,10 +42,10 @@ document.getElementById('btn2').onclick = function() {
     alert("請輸入msg");
   else
   {
-  document.writeln("====== a ======== b ======== c ======== d ======== e ======");
+  document.writeln("======== a ======== b ======== c ======== d ======== e ======");
   for(x = 0;x < 80;x++) {
     if(x<10)
-      document.write("<p> &nbsp&nbsp;t[" + x + "] : ");
+      document.write("<p> &nbsp;t[" + x + "] : ");
     else
       document.write("<p>t[" + x + "] : ");
 
@@ -68,13 +68,13 @@ document.getElementById('btn2').onclick = function() {
     }
     if((x+1)%20 == 0 && x != 0 && x != 79 ) {
       document.writeln("<p>");
-      document.writeln("=======================================================");
+      document.writeln("===============================================================");
     }
     //document.write("<BR>");
     //document.write("<p>t[" + x + "] : " + SHA1(txt_string)[x].join(" | ") + "</p>");
   } 
   document.write("<p>");
-  document.writeln("=======================================================");
+  document.writeln("===============================================================");
   document.write("<p>SHA-1 hash of '" + txt_string +"' is :" + SHA1(txt_string)[80] + "</p>");
   }
 }
