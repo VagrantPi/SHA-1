@@ -12,12 +12,16 @@
   background-color: gray;
   padding: 20px;
   margin: 20px;
+  font-family:Arial;
 }
-#input,.btn,#content,#output {
+#input,.btn,#content,#output,.pp{
   font-size: 35px;
   display: block; 
   margin:  auto;
   font-family:Arial;
+}
+#fadein {
+  -webkit-animation-delay:2s;
 }
 .row {
   text-align : center;
@@ -27,4 +31,8 @@
   display:inline-block;
   background-color: red;
   font-family:Arial;
+}
+.pp {
+  text-align: center;
+  font-family:monospace;
 }
